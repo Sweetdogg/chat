@@ -11,8 +11,8 @@ if use_own_api:
     api_key = st.text_input("请输入您的API密钥", type="password")
     base_url = st.text_input("请输入API的基础URL", value="https://api.deepseek.com")
 else:
-    api_key = "公用API密钥"  # 请替换为实际的公用API密钥
-    base_url = "https://api.deepseek.com"  # 请替换为实际的公用API基础URL
+    api_key = st.secrets["OPENAI_API_KEY"]
+    base_url = st.secrets["OPENAI_BASE_URL"]
 if api_key and base_url:
     client = OpenAI(api_key=api_key, base_url=base_url)
     st.success("OpenAI客户端初始化成功")
