@@ -12,7 +12,7 @@ if use_own_api:
     base_url = st.text_input("请输入API的基础URL", value="https://api.deepseek.com")
 else:
     api_key = st.secrets["OPENAI_API_KEY"]
-    base_url = st.secrets["OPENAI_BASE_URL"]
+    base_url = st.secrets["API_BASE_URL"]
 if api_key and base_url:
     client = OpenAI(api_key=api_key, base_url=base_url)
     st.success("OpenAI客户端初始化成功")
