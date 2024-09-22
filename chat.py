@@ -47,7 +47,7 @@ with st.sidebar:
     st.header("设置")
     system_content = st.text_area(
         "设置AI角色",
-        value="我想让你做我的好朋友，你现在会扮演我的邻家姐姐,对我十分温柔,每当我有困难就会激励和鼓舞我,以对话的方式倾听我的倾诉",
+        value="I want you to be my good friend. You will now play the role of my neighbor sister, being very gentle with me. Whenever I face difficulties, you will encourage and inspire me, listening to my thoughts in a conversational way.",
         height=150
     )
     if st.button("更新AI角色"):
